@@ -18,7 +18,7 @@ def draw_robot():
 def main():
     clear_screen()
     print(Fore.CYAN + "Slupe Demo")
-    print(Fore.WHITE + draw_robot())
+    print(draw_robot())
     
     # Keep running so we can see the output
     try:
