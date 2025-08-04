@@ -1,7 +1,7 @@
 === SLUPE RESULTS ===
-📋 Output copied to clipboard @ 09:47:34.807 pm
+📋 Output copied to clipboard @ 09:47:44.962 pm
 ---------------------
-v8m ✅ file_replace_text /Users/stuart/repos/slupe-ascii-demo/src/artist.py
+v8m ❌ file_replace_text /Users/stuart/repos/slupe-ascii-demo/src/artist.py - old_text not found in file
 === END ===
 The issue might be that `autoreset=True` in the colorama init is resetting colors too early. Let me try a different approach with explicit color codes in the string:
 
