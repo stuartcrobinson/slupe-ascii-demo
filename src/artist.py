@@ -26,7 +26,7 @@ def colorize_line(line, color_map=None):
     return colored_line + Style.RESET_ALL
 
 def render_art(art_text, line_colors=None):
-    lines = art_text.strip().split('\n')
+    lines = art_text.strip('\n').split('\n')
     
     if line_colors:
         for i, line in enumerate(lines):
@@ -35,7 +35,8 @@ def render_art(art_text, line_colors=None):
             else:
                 print(line)
     else:
-        print(art_text.strip())
+        for line in lines:
+            print(line)
 
 def main():
     clear_screen()
