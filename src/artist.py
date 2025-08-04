@@ -2,7 +2,7 @@
 import time
 import os
 from colorama import init, Fore, Style
-init(autoreset=True)
+init()
 
 def clear_screen():
     os.system('cls' if os.name == 'nt' else 'clear')
@@ -24,7 +24,7 @@ def main():
         while True:
             time.sleep(1)
     except KeyboardInterrupt:
-        print("\nRobot signing off!")
+        print(Style.RESET_ALL + "\nRobot signing off!")
 
 if __name__ == "__main__":
     main()
