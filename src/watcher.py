@@ -39,12 +39,10 @@ class ArtistFileHandler(FileSystemEventHandler):
             # Run artist.py as a subprocess
             env = os.environ.copy()
             env['PYTHONUNBUFFERED'] = '1'
+            env['FORCE_COLOR'] = '1'
+            env['COLORAMA_FORCE_COLOR'] = '1'
             self.process = subprocess.Popen(
                 [sys.executable, '-u', str(self.artist_path)],
-                stdout=subprocess.PIPE,
-                stderr=subprocess.STDOUT,
-                universal_newlines=True,
-                bufsize=0,
                 env=env,
                 preexec_fn=os.setsid if os.name != 'nt' else None,
                 creationflags=subprocess.CREATE_NEW_PROCESS_GROUP if os.name == 'nt' else 0
@@ -64,10 +62,7 @@ class ArtistFileHandler(FileSystemEventHandler):
     
     def read_output(self):
         """Read and display output from artist.py"""
-        if self.process and self.process.stdout:
-            for line in iter(self.process.stdout.readline, ''):
-                if line:
-                    print(line, end='')
+        pass
     
     def stop_artist(self):
         """Stop the currently running artist.py"""
