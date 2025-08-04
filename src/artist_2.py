@@ -1,12 +1,3 @@
-=== SLUPE RESULTS ===
-k9d ❌ file_replace_text /Users/stuart/repos/slupe-ascii-demo/src/artist.py - old_text not found in file
-p5k ✅ file_replace_text /Users/stuart/repos/slupe-ascii-demo/src/artist.py
-=== END ===
-
-=== OUTPUTS ===
-
-[k9d] file_replace_text /Users/stuart/repos/slupe-ascii-demo/src/artist.py (failed - showing file contents):
-=== START FILE: /Users/stuart/repos/slupe-ascii-demo/src/artist.py ===
 import time
 import os
 from colorama import init, Fore, Back, Style
@@ -52,22 +43,18 @@ def render_art(art_text, line_colors=None):
             print(line)
 
 def main():
-    frame = 0
+    clear_screen()
+    print(Fore.CYAN + "Slupe Demo" + Style.RESET_ALL)
+    print()
+    
+    robot = draw_robot()
+    render_art(robot, [Fore.WHITE, Fore.WHITE, Fore.WHITE, Fore.WHITE, Fore.YELLOW, Fore.BLUE, Fore.RED])
+    
     try:
         while True:
-            clear_screen()
-            print(Fore.CYAN + "Slupe Demo" + Style.RESET_ALL)
-            print()
-            
-            robot = draw_robot(frame)
-            render_art(robot, [Fore.WHITE, Fore.WHITE, Fore.WHITE, Fore.WHITE, Fore.YELLOW, Fore.BLUE, Fore.RED])
-            
-            frame += 1
-            time.sleep(0.3)
+            time.sleep(1)
     except KeyboardInterrupt:
         print("\nRobot signing off!")
 
 if __name__ == "__main__":
     main()
-=== END FILE: /Users/stuart/repos/slupe-ascii-demo/src/artist.py ===
-=== END ===

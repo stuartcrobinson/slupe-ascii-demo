@@ -1,23 +1,14 @@
 === SLUPE RESULTS ===
-📋 Output copied to clipboard @ 10:04:42.883 pm
+📋 Output copied to clipboard @ 10:09:12.166 pm
 ---------------------
-n7q ✅ file_replace_text /Users/stuart/repos/slupe-ascii-demo/src/artist.py
-x2m ✅ file_replace_text /Users/stuart/repos/slupe-ascii-demo/src/artist.py
+k9d ❌ file_replace_text /Users/stuart/repos/slupe-ascii-demo/src/artist.py - old_text not found in file
+p5k ✅ file_replace_text /Users/stuart/repos/slupe-ascii-demo/src/artist.py
 === END ===
 ```sh nesl
-#!nesl [@three-char-SHA-256: n7q]
+#!nesl [@three-char-SHA-256: k9d]
 action = "file_replace_text"
 path = "/Users/stuart/repos/slupe-ascii-demo/src/artist.py"
-old_text = <<'EOT_n7q'
-def draw_robot():
-    robot = """
-  [o_o]
-  <| |>
-   / \\
-    """
-    return robot
-EOT_n7q
-new_text = <<'EOT_n7q'
+old_text = <<'EOT_k9d'
 def draw_robot():
     robot = """
         ◇◆◇
@@ -29,19 +20,87 @@ def draw_robot():
    / \\
     """
     return robot
-EOT_n7q
-#!end_n7q
+EOT_k9d
+new_text = <<'EOT_k9d'
+def draw_robot(frame=0):
+    frames = [
+        """
+        ◇◆◇
+       ◆◇◆◇◆
+        ◇◆◇
+         |
+  [o_o]
+  <| |>
+   / \\
+    """,
+        """
+        ◆◇◆
+       ◇◆◇◆◇
+        ◆◇◆
+         |
+  [o_o]
+  \\| |/
+   / \\
+    """,
+        """
+        ◇◆◇
+       ◆◇◆◇◆
+        ◇◆◇
+         |
+  [o_o]
+  /| |\\
+   / \\
+    """,
+        """
+        ◆◇◆
+       ◇◆◇◆◇
+        ◆◇◆
+         |
+  [^_^]
+  \\| |/
+   \\ /
+    """
+    ]
+    return frames[frame % len(frames)]
+EOT_k9d
+#!end_k9d
 ```
 
 ```sh nesl
-#!nesl [@three-char-SHA-256: x2m]
+#!nesl [@three-char-SHA-256: p5k]
 action = "file_replace_text"
 path = "/Users/stuart/repos/slupe-ascii-demo/src/artist.py"
-old_text = <<'EOT_x2m'
-    render_art(robot, [Fore.YELLOW, Fore.BLUE, Fore.RED])
-EOT_x2m
-new_text = <<'EOT_x2m'
+old_text = <<'EOT_p5k'
+def main():
+    clear_screen()
+    print(Fore.CYAN + "Slupe Demo" + Style.RESET_ALL)
+    print()
+    
+    robot = draw_robot()
     render_art(robot, [Fore.WHITE, Fore.WHITE, Fore.WHITE, Fore.WHITE, Fore.YELLOW, Fore.BLUE, Fore.RED])
-EOT_x2m
-#!end_x2m
+    
+    try:
+        while True:
+            time.sleep(1)
+    except KeyboardInterrupt:
+        print("\nRobot signing off!")
+EOT_p5k
+new_text = <<'EOT_p5k'
+def main():
+    frame = 0
+    try:
+        while True:
+            clear_screen()
+            print(Fore.CYAN + "Slupe Demo" + Style.RESET_ALL)
+            print()
+            
+            robot = draw_robot(frame)
+            render_art(robot, [Fore.WHITE, Fore.WHITE, Fore.WHITE, Fore.WHITE, Fore.YELLOW, Fore.BLUE, Fore.RED])
+            
+            frame += 1
+            time.sleep(0.3)
+    except KeyboardInterrupt:
+        print("\nRobot signing off!")
+EOT_p5k
+#!end_p5k
 ```
