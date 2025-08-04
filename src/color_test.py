@@ -1,13 +1,3 @@
-=== SLUPE RESULTS ===
-📋 Output copied to clipboard @ 09:50:00.172 pm
----------------------
-t4p ✅ file_write /Users/stuart/repos/slupe-ascii-demo/src/color_test.py
-=== END ===
-```sh nesl
-#!nesl [@three-char-SHA-256: t4p]
-action = "file_write"
-path = "/Users/stuart/repos/slupe-ascii-demo/src/color_test.py"
-content = <<'EOT_t4p'
 from colorama import init, Fore, Back, Style
 
 init()
@@ -32,11 +22,3 @@ print("\nSimple colored art:")
 print(Fore.YELLOW + "  ☀")
 print(Fore.BLUE + "~~~~")
 print(Fore.GREEN + " 🌱 ")
-EOT_t4p
-#!end_t4p
-```
-
-Run this with:
-```bash
-python /Users/stuart/repos/slupe-ascii-demo/src/color_test.py
-```
