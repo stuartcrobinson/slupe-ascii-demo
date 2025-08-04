@@ -7,17 +7,46 @@ init()
 def clear_screen():
     os.system('cls' if os.name == 'nt' else 'clear')
 
-def draw_robot():
-    robot = """
-           ◇◆◇
-          ◆◇◆◇◆
-           ◇◆◇
-         
+def draw_robot(frame=0):
+    frames = [
+        """
+        ◇◆◇
+       ◆◇◆◇◆
+        ◇◆◇
+         |
   [o_o]
   <| |>
    / \\
+    """,
+        """
+        ◆◇◆
+       ◇◆◇◆◇
+        ◆◇◆
+         |
+  [o_o]
+  \\| |/
+   / \\
+    """,
+        """
+        ◇◆◇
+       ◆◇◆◇◆
+        ◇◆◇
+         |
+  [o_o]
+  /| |\\
+   / \\
+    """,
+        """
+        ◆◇◆
+       ◇◆◇◆◇
+        ◆◇◆
+         |
+  [^_^]
+  \\| |/
+   \\ /
     """
-    return robot
+    ]
+    return frames[frame % len(frames)]
 
 def colorize_line(line, color_map=None):
     if not color_map:
