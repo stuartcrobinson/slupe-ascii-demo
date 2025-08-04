@@ -59,7 +59,7 @@ def draw_robot():
 EOT_a2b
 new_text = <<'EOT_a2b'
 def draw_robot():
-   robot = """
+    robot = """
         ◇◆◇
        ◆◇◆◇◆
         ◇◆◇
