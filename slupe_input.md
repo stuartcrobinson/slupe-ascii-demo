@@ -1,10 +1,9 @@
 === SLUPE RESULTS ===
-📋 Output copied to clipboard @ 10:37:55.614 pm
+📋 Output copied to clipboard @ 10:40:38.072 pm
 ---------------------
-b3c ✅ file_replace_text /Users/stuart/repos/slupe-ascii-demo/src/artist.py
-a2b ❌ file_replace_text /Users/stuart/repos/slupe-ascii-demo/src/artist.py - old_text not found in file
+b3c ❌ file_replace_text /Users/stuart/repos/slupe-ascii-demo/src/artist.py - old_text not found in file
+a2b ✅ file_replace_text /Users/stuart/repos/slupe-ascii-demo/src/artist.py
 === END ===
-I need to add some color to the robot.
 
 ```sh nesl
 #!nesl [@three-char-SHA-256: b3c]
@@ -52,12 +51,12 @@ action = "file_replace_text"
 path = "/Users/stuart/repos/slupe-ascii-demo/src/artist.py"
 old_text = <<'EOT_a2b'
 def draw_robot():
-   robot = """
- [o_o]
- <| |>
-  / \\
-   """
-   return robot
+    robot = """
+  [o_o]
+  <| |>
+   / \\
+    """
+    return robot
 EOT_a2b
 new_text = <<'EOT_a2b'
 def draw_robot():

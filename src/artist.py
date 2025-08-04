@@ -8,12 +8,16 @@ def clear_screen():
     os.system('cls' if os.name == 'nt' else 'clear')
 
 def draw_robot():
-    robot = """
-  [o_o]
-  <| |>
-   / \\
-    """
-    return robot
+   robot = """
+          ◇◆◇
+         ◆◇◆◇◆
+          ◇◆◇
+        
+ [o_o]
+ <| |>
+  / \\
+   """
+   return robot
 
 def colorize_line(line, color_map=None):
     if not color_map:
