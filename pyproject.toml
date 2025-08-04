@@ -1,0 +1,14 @@
+[project]
+name = "slupe-ascii-demo"
+version = "0.1.0"
+description = "ASCII art demo for slupe CLI tool"
+requires-python = ">=3.11"
+dependencies = [
+    "watchdog>=4.0.0",
+    "colorama>=0.4.6",
+    "rich>=13.7.0",
+]
+
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.build_meta"
