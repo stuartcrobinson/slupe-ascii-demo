@@ -7,13 +7,64 @@ init()
 def clear_screen():
     os.system('cls' if os.name == 'nt' else 'clear')
 
-def draw_robot():
-    robot = """
-  [o_o]
-  <| |>
-   / \\
+def draw_robot(frame=0):
+    frames = [
+        """
+        ◇◆◇
+       ◆◇◆◇◆
+        ◇◆◇
+         |
+ [o_o]
+ <| |>
+  / \\
+    """,
+        """
+        ◆◇◆
+       ◇◆◇◆◇
+        ◆◇◆
+         |
+   [o_o]
+   \\| |/
+    / \\
+    """,
+        """
+        ◇◆◇
+       ◆◇◆◇◆
+        ◇◆◇
+         |
+     [o_o]
+     /| |\\
+      / \\
+    """,
+        """
+        ◆◇◆
+       ◇◆◇◆◇
+        ◆◇◆
+         |
+       [^_^]
+       \\| |/
+        \\ /
+    """,
+        """
+        ◇◆◇
+       ◆◇◆◇◆
+        ◇◆◇
+         |
+     [o_o]
+     <| |>
+      / \\
+    """,
+        """
+        ◆◇◆
+       ◇◆◇◆◇
+        ◆◇◆
+         |
+   [o_o]
+   /| |\\
+    / \\
     """
-    return robot
+    ]
+    return frames[frame % len(frames)]
 
 def colorize_line(line, color_map=None):
     if not color_map:
@@ -46,8 +97,8 @@ def main():
             print(Fore.CYAN + "Slupe Demo" + Style.RESET_ALL)
             print()
             
-            robot = draw_robot()
-            render_art(robot)
+            robot = draw_robot(frame)
+            render_art(robot, [Fore.WHITE, Fore.WHITE, Fore.WHITE, Fore.WHITE, Fore.YELLOW, Fore.BLUE, Fore.RED])
             
             frame += 1
             time.sleep(0.3)
