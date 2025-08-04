@@ -8,10 +8,10 @@ def clear_screen():
     os.system('cls' if os.name == 'nt' else 'clear')
 
 def draw_robot():
-    robot = """
-  [o_o]
-  <| |>
-   / \\
+    robot = f"""
+  {Fore.YELLOW}[{Fore.GREEN}o_o{Fore.YELLOW}]
+  {Fore.BLUE}<| |>
+   {Fore.RED}/ \\
     """
     return robot
 

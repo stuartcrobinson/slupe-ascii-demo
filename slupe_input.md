@@ -1,37 +1,29 @@
 === SLUPE RESULTS ===
-📋 Output copied to clipboard @ 09:39:57.073 pm
+📋 Output copied to clipboard @ 09:45:07.711 pm
 ---------------------
-x9m ❌ file_replace_text /Users/stuart/repos/slupe-ascii-demo/src/artist.py - old_text not found in file
+x9k ✅ file_replace_text /Users/stuart/repos/slupe-ascii-demo/src/artist.py
 === END ===
-I'll add some color to the robot! Let me make a small change to give it some personality.
-
 ```sh nesl
-#!nesl [@three-char-SHA-256: x9m]
+#!nesl [@three-char-SHA-256: x9k]
 action = "file_replace_text"
 path = "/Users/stuart/repos/slupe-ascii-demo/src/artist.py"
-old_text = <<'EOT_x9m'
+old_text = <<'EOT_x9k'
 def draw_robot():
     robot = """
-  [o_o]-
+  [o_o]
   <| |>
    / \\
     """
     return robot
-EOT_x9m
-new_text = <<'EOT_x9m'
+EOT_x9k
+new_text = <<'EOT_x9k'
 def draw_robot():
-    robot = f"""{Fore.YELLOW}  [o_o]-
-{Fore.BLUE}  <| |>
-{Fore.GREEN}   / \\
+    robot = f"""
+  {Fore.YELLOW}[{Fore.GREEN}o_o{Fore.YELLOW}]
+  {Fore.BLUE}<| |>
+   {Fore.RED}/ \\
     """
     return robot
-EOT_x9m
-#!end_x9m
+EOT_x9k
+#!end_x9k
 ```
-
-This gives the robot:
-- Yellow head/face
-- Blue body
-- Green legs
-
-Run the script to see your colorful robot!
