@@ -10,10 +10,9 @@ def clear_screen():
 
 def draw_robot():
     robot = """
-     [o_o]
-     <| |>
-      / \\
-    """
+  [o_o]
+  <| |>
+   / \\"""  # Removed the trailing newline after the last backslash
     return robot
 
 def colorize_line(line, color_map=None):
@@ -44,8 +43,6 @@ def main():
     try:
         while True:
             clear_screen()
-            print(Fore.CYAN + "Slupe Demo" + Style.RESET_ALL)
-            print()
             
             robot = draw_robot()
             render_art(robot)

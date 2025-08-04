@@ -9,60 +9,54 @@ def clear_screen():
 
 def draw_robot(frame=0):
     frames = [
-        """
-           ◇◆◇
-          ◆◇◆◇◆
-           ◇◆◇
+     """
+        ◇◆◇
+       ◆◇◆◇◆
+        ◇◆◇
 
+  [o_o]
+  <| |>
+   / \\""",
+     """
+        ◆◇◆
+       ◇◆◇◆◇
+        ◆◇◆
+      
      [o_o]
-     <| |>
-      / \\
-    """,
-        """
-           ◆◇◆
-          ◇◆◇◆◇
-           ◆◇◆
-         
-        [o_o]
-        \\| |/
-         / \\
-    """,
-        """
-           ◇◆◇
-          ◆◇◆◇◆
-           ◇◆◇
-         
-           [o_o]
-           /| |\\
-            / \\
-    """,
-        """
-           ◆◇◆
-          ◇◆◇◆◇
-           ◆◇◆
-         
-              [^_^]
-              \\| |/
-               \\ /
-    """,
-        """
-           ◇◆◇
-          ◆◇◆◇◆
-           ◇◆◇
-         
-           [o_o]
-           <| |>
-            / \\
-    """,
-        """
-           ◆◇◆
-          ◇◆◇◆◇
-           ◆◇◆
-         
+     \\| |/
+      / \\""",
+     """
+        ◇◆◇
+       ◆◇◆◇◆
+        ◇◆◇
+      
         [o_o]
         /| |\\
-         / \\
-    """
+         / \\""",
+     """
+        ◆◇◆
+       ◇◆◇◆◇
+        ◆◇◆
+      
+           [^_^]
+           \\| |/
+            \\ /""",
+     """
+        ◇◆◇
+       ◆◇◆◇◆
+        ◇◆◇
+      
+        [o_o]
+        <| |>
+         / \\""",
+     """
+        ◆◇◆
+       ◇◆◇◆◇
+        ◆◇◆
+      
+     [o_o]
+     /| |\\
+      / \\"""
     ]
     return frames[frame % len(frames)]
 
@@ -94,8 +88,6 @@ def main():
     try:
         while True:
             clear_screen()
-            print(Fore.CYAN + "Slupe Demo" + Style.RESET_ALL)
-            print()
             
             robot = draw_robot(frame)
             render_art(robot, [Fore.WHITE, Fore.WHITE, Fore.WHITE, Fore.WHITE, Fore.YELLOW, Fore.BLUE, Fore.RED])

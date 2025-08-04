@@ -10,9 +10,10 @@ def clear_screen():
 
 def draw_robot():
     robot = """
-  [o_o]
-  <| |>
-   / \\"""  # Removed the trailing newline after the last backslash
+     [o_o]
+     <| |>
+      / \\
+    """
     return robot
 
 def colorize_line(line, color_map=None):
@@ -30,23 +31,29 @@ def render_art(art_text, line_colors=None):
     
     if line_colors:
         for i, line in enumerate(lines):
+            end_char = '' if i == len(lines) - 1 else '\n'
             if i < len(line_colors):
-                print(line_colors[i] + line + Style.RESET_ALL)
+                print(line_colors[i] + line + Style.RESET_ALL, end=end_char)
             else:
-                print(line)
+                print(line, end=end_char)
     else:
-        for line in lines:
-            print(line)
+        for i, line in enumerate(lines):
+            end_char = '' if i == len(lines) - 1 else '\n'
+            print(line, end=end_char)
 
 def main():
-    clear_screen()
-    
-    robot = draw_robot()
-    render_art(robot, [Fore.WHITE, Fore.WHITE, Fore.WHITE, Fore.WHITE, Fore.YELLOW, Fore.BLUE, Fore.RED])
-    
+    frame = 0
     try:
         while True:
-            time.sleep(1)
+            clear_screen()
+            print(Fore.CYAN + "Slupe Demo" + Style.RESET_ALL)
+            print()
+            
+            robot = draw_robot()
+            render_art(robot)
+            
+            frame += 1
+            time.sleep(0.3)
     except KeyboardInterrupt:
         print("\nRobot signing off!")
 

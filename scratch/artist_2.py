@@ -9,14 +9,13 @@ def clear_screen():
 
 def draw_robot():
     robot = """
-           ◇◆◇
-          ◆◇◆◇◆
-           ◇◆◇
-         
-     [o_o]
-     <| |>
-      / \\
-    """
+        ◇◆◇
+       ◆◇◆◇◆
+        ◇◆◇
+      
+  [o_o]
+  <| |>
+   / \\"""
     return robot
 
 def colorize_line(line, color_map=None):
@@ -44,8 +43,6 @@ def render_art(art_text, line_colors=None):
 
 def main():
     clear_screen()
-    print(Fore.CYAN + "Slupe Demo" + Style.RESET_ALL)
-    print()
     
     robot = draw_robot()
     render_art(robot, [Fore.WHITE, Fore.WHITE, Fore.WHITE, Fore.WHITE, Fore.YELLOW, Fore.BLUE, Fore.RED])

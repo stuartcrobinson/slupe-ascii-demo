@@ -19,8 +19,6 @@ def main():
     try:
         while True:
             clear_screen()
-            print(Fore.CYAN + "Slupe Demo" + Style.RESET_ALL)
-            print()
             
             robot = draw_robot()
             render_art(robot)
@@ -33,8 +31,6 @@ EOT_b3c
 new_text = <<'EOT_b3c'
 def main():
     clear_screen()
-    print(Fore.CYAN + "Slupe Demo" + Style.RESET_ALL)
-    print()
     
     robot = draw_robot()
     render_art(robot, [Fore.WHITE, Fore.WHITE, Fore.WHITE, Fore.WHITE, Fore.YELLOW, Fore.BLUE, Fore.RED])
@@ -56,22 +52,22 @@ path = "/Users/stuart/repos/slupe-ascii-demo/src/artist.py"
 old_text = <<'EOT_a2b'
 def draw_robot():
     robot = """
-     [o_o]
-     <| |>
-      / \\
+  [o_o]
+  <| |>
+   / \\
     """
     return robot
 EOT_a2b
 new_text = <<'EOT_a2b'
 def draw_robot():
    robot = """
-           ◇◆◇
-          ◆◇◆◇◆
-           ◇◆◇
-        
-    [o_o]
-    <| |>
-     / \\
+        ◇◆◇
+       ◆◇◆◇◆
+        ◇◆◇
+     
+ [o_o]
+ <| |>
+  / \\
    """
    return robot
 EOT_a2b
@@ -91,73 +87,66 @@ path = "/Users/stuart/repos/slupe-ascii-demo/src/artist.py"
 old_text = <<'EOT_c4d'
 def draw_robot():
     robot = """
-           ◇◆◇
-          ◆◇◆◇◆
-           ◇◆◇
-         
-     [o_o]
-     <| |>
-      / \\
-    """
+        ◇◆◇
+       ◆◇◆◇◆
+        ◇◆◇
+      
+  [o_o]
+  <| |>
+   / \\"""
     return robot
 EOT_c4d
 new_text = <<'EOT_c4d'
 def draw_robot(frame=0):
     frames = [
-        """
-           ◇◆◇
-          ◆◇◆◇◆
-           ◇◆◇
-
+     """
+        ◇◆◇
+       ◆◇◆◇◆
+        ◇◆◇
+    
+  [o_o]
+  <| |>
+   / \\""",
+     """
+        ◆◇◆
+       ◇◆◇◆◇
+        ◆◇◆
+      
      [o_o]
-     <| |>
-      / \\
-    """,
-        """
-           ◆◇◆
-          ◇◆◇◆◇
-           ◆◇◆
-         
-        [o_o]
-        \\| |/
-         / \\
-    """,
-        """
-           ◇◆◇
-          ◆◇◆◇◆
-           ◇◆◇
-         
-           [o_o]
-           /| |\\
-            / \\
-    """,
-        """
-           ◆◇◆
-          ◇◆◇◆◇
-           ◆◇◆
-         
-              [^_^]
-              \\| |/
-               \\ /
-    """,
-        """
-           ◇◆◇
-          ◆◇◆◇◆
-           ◇◆◇
-         
-           [o_o]
-           <| |>
-            / \\
-    """,
-        """
-           ◆◇◆
-          ◇◆◇◆◇
-           ◆◇◆
-         
+     \\| |/
+      / \\""",
+     """
+        ◇◆◇
+       ◆◇◆◇◆
+        ◇◆◇
+      
         [o_o]
         /| |\\
-         / \\
-    """
+         / \\""",
+     """
+        ◆◇◆
+       ◇◆◇◆◇
+        ◆◇◆
+      
+           [^_^]
+           \\| |/
+            \\ /""",
+     """
+        ◇◆◇
+       ◆◇◆◇◆
+        ◇◆◇
+      
+        [o_o]
+        <| |>
+         / \\""",
+     """
+        ◆◇◆
+       ◇◆◇◆◇
+        ◆◇◆
+      
+     [o_o]
+     /| |\\
+      / \\"""
     ]
     return frames[frame % len(frames)]
 EOT_c4d
@@ -171,8 +160,6 @@ path = "/Users/stuart/repos/slupe-ascii-demo/src/artist.py"
 old_text = <<'EOT_d5e'
 def main():
     clear_screen()
-    print(Fore.CYAN + "Slupe Demo" + Style.RESET_ALL)
-    print()
     
     robot = draw_robot()
     render_art(robot, [Fore.WHITE, Fore.WHITE, Fore.WHITE, Fore.WHITE, Fore.YELLOW, Fore.BLUE, Fore.RED])
@@ -189,8 +176,6 @@ def main():
     try:
         while True:
             clear_screen()
-            print(Fore.CYAN + "Slupe Demo" + Style.RESET_ALL)
-            print()
             
             robot = draw_robot(frame)
             render_art(robot, [Fore.WHITE, Fore.WHITE, Fore.WHITE, Fore.WHITE, Fore.YELLOW, Fore.BLUE, Fore.RED])
