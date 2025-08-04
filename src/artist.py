@@ -8,16 +8,58 @@ init()
 def clear_screen():
     os.system('cls' if os.name == 'nt' else 'clear')
 
-def draw_robot():
-    robot = """
+def draw_robot(frame=0):
+    frames = [
+     """
         ◇◆◇
        ◆◇◆◇◆
         ◇◆◇
     
   [o_o]
   <| |>
-   / \\"""
-    return robot
+   / \\""",
+     """
+        ◆◇◆
+       ◇◆◇◆◇
+        ◆◇◆
+      
+     [o_o]
+     \\| |/
+      / \\""",
+     """
+        ◇◆◇
+       ◆◇◆◇◆
+        ◇◆◇
+      
+        [o_o]
+        /| |\\
+         / \\""",
+     """
+        ◆◇◆
+       ◇◆◇◆◇
+        ◆◇◆
+      
+           [^_^]
+           \\| |/
+            \\ /""",
+     """
+        ◇◆◇
+       ◆◇◆◇◆
+        ◇◆◇
+      
+        [o_o]
+        <| |>
+         / \\""",
+     """
+        ◆◇◆
+       ◇◆◇◆◇
+        ◆◇◆
+      
+     [o_o]
+     /| |\\
+      / \\"""
+    ]
+    return frames[frame % len(frames)]
 
 def colorize_line(line, color_map=None):
     if not color_map:
@@ -43,14 +85,16 @@ def render_art(art_text, line_colors=None):
             print(line)
 
 def main():
-    clear_screen()
-    
-    robot = draw_robot()
-    render_art(robot, [Fore.WHITE, Fore.WHITE, Fore.WHITE, Fore.WHITE, Fore.YELLOW, Fore.BLUE, Fore.RED])
-    
+    frame = 0
     try:
         while True:
-            time.sleep(1)
+            clear_screen()
+            
+            robot = draw_robot(frame)
+            render_art(robot, [Fore.WHITE, Fore.WHITE, Fore.WHITE, Fore.WHITE, Fore.YELLOW, Fore.BLUE, Fore.RED])
+            
+            frame += 1
+            time.sleep(0.3)
     except KeyboardInterrupt:
         print("\nRobot signing off!")
 
