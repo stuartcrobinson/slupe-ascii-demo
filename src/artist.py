@@ -1,3 +1,4 @@
+#/Users/stuart/repos/slupe-ascii-demo/src/artist.py
 import time
 import os
 from colorama import init, Fore, Back, Style
