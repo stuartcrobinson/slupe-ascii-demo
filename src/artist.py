@@ -9,6 +9,10 @@ def clear_screen():
 
 def draw_robot():
     robot = """
+        ◇◆◇
+       ◆◇◆◇◆
+        ◇◆◇
+         |
   [o_o]
   <| |>
    / \\
@@ -44,7 +48,7 @@ def main():
     print()
     
     robot = draw_robot()
-    render_art(robot, [Fore.YELLOW, Fore.BLUE, Fore.RED])
+    render_art(robot, [Fore.WHITE, Fore.WHITE, Fore.WHITE, Fore.WHITE, Fore.YELLOW, Fore.BLUE, Fore.RED])
     
     try:
         while True:
