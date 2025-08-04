@@ -13,9 +13,9 @@ def draw_robot():
           ◆◇◆◇◆
            ◇◆◇
          
-  [o_o]
-  <| |>
-   / \\
+     [o_o]
+     <| |>
+      / \\
     """
     return robot
 

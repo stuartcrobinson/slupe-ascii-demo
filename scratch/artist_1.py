@@ -10,9 +10,9 @@ def clear_screen():
 
 def draw_robot():
     robot = """
-  [o_o]
-  <| |>
-   / \\
+     [o_o]
+     <| |>
+      / \\
     """
     return robot
 

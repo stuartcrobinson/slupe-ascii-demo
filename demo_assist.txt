@@ -56,9 +56,9 @@ path = "/Users/stuart/repos/slupe-ascii-demo/src/artist.py"
 old_text = <<'EOT_a2b'
 def draw_robot():
     robot = """
-  [o_o]
-  <| |>
-   / \\
+     [o_o]
+     <| |>
+      / \\
     """
     return robot
 EOT_a2b
@@ -69,9 +69,9 @@ def draw_robot():
          ◆◇◆◇◆
           ◇◆◇
         
- [o_o]
- <| |>
-  / \\
+    [o_o]
+    <| |>
+     / \\
    """
    return robot
 EOT_a2b
@@ -95,9 +95,9 @@ def draw_robot():
           ◆◇◆◇◆
            ◇◆◇
          
-  [o_o]
-  <| |>
-   / \\
+     [o_o]
+     <| |>
+      / \\
     """
     return robot
 EOT_c4d
