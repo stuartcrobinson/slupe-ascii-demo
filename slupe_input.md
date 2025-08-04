@@ -1,5 +1,5 @@
 === SLUPE RESULTS ===
-📋 Output copied to clipboard @ 11:27:42.954 pm
+📋 Output copied to clipboard @ 11:28:41.951 pm
 ---------------------
 b3c ✅ file_replace_text /Users/stuart/repos/slupe-ascii-demo/src/artist.py
 a2b ✅ file_replace_text /Users/stuart/repos/slupe-ascii-demo/src/artist.py
@@ -73,9 +73,7 @@ def draw_robot():
   [o_o]
   <| |>
    / \\"""
-   return robot
+    return robot
 EOT_a2b
 #!end_a2b
 ```
-
-````

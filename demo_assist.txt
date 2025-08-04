@@ -67,7 +67,7 @@ def draw_robot():
   [o_o]
   <| |>
    / \\"""
-   return robot
+    return robot
 EOT_a2b
 #!end_a2b
 ```

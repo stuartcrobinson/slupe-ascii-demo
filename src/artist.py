@@ -17,7 +17,7 @@ def draw_robot():
   [o_o]
   <| |>
    / \\"""
-   return robot
+    return robot
 
 def colorize_line(line, color_map=None):
     if not color_map:
