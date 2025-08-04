@@ -1,16 +1,34 @@
+#!/usr/bin/env python3
+"""
+ASCII Robot Artist - Initial static version
+This file will be modified by the LLM to add animations
+"""
 import time
 import os
 from colorama import init, Fore, Style
+
+# Initialize colorama for cross-platform colored output
 init(autoreset=True)
 
 def clear_screen():
     os.system('cls' if os.name == 'nt' else 'clear')
 
 def draw_robot():
+    """Draw a simple ASCII robot"""
     robot = """
-  [o_o]-
+  [o_o]
   <| |>
    / \\
+    """
+    robot2 = """
+       ___
+      |o o|
+      |_-_|
+     /|[ ]|\\
+    d |   | b
+      |   |
+      |___|
+      d   b
     """
     return robot
 
