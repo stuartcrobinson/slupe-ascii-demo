@@ -44,7 +44,7 @@ def main():
     print()
     
     robot = draw_robot()
-    render_art(robot)
+    render_art(robot, [Fore.YELLOW, Fore.BLUE, Fore.RED])
     
     try:
         while True:

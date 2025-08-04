@@ -1,26 +1,17 @@
 === SLUPE RESULTS ===
-📋 Output copied to clipboard @ 10:00:31.517 pm
+📋 Output copied to clipboard @ 10:02:34.099 pm
 ---------------------
-r2k ✅ file_replace_text /Users/stuart/repos/slupe-ascii-demo/src/artist.py
+j8w ✅ file_replace_text /Users/stuart/repos/slupe-ascii-demo/src/artist.py
 === END ===
 ```sh nesl
-#!nesl [@three-char-SHA-256: r2k]
+#!nesl [@three-char-SHA-256: j8w]
 action = "file_replace_text"
 path = "/Users/stuart/repos/slupe-ascii-demo/src/artist.py"
-old_text = <<'EOT_r2k'
-    robot = draw_robot()
-    
-    robot_colors = [
-        Fore.YELLOW,
-        Fore.BLUE,
-        Fore.RED
-    ]
-    
-    render_art(robot, robot_colors)
-EOT_r2k
-new_text = <<'EOT_r2k'
-    robot = draw_robot()
+old_text = <<'EOT_j8w'
     render_art(robot)
-EOT_r2k
-#!end_r2k
+EOT_j8w
+new_text = <<'EOT_j8w'
+    render_art(robot, [Fore.YELLOW, Fore.BLUE, Fore.RED])
+EOT_j8w
+#!end_j8w
 ```
