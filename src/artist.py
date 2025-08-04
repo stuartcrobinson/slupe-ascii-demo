@@ -39,18 +39,16 @@ def render_art(art_text, line_colors=None):
             print(line)
 
 def main():
-    frame = 0
+    clear_screen()
+    print(Fore.CYAN + "Slupe Demo" + Style.RESET_ALL)
+    print()
+    
+    robot = draw_robot()
+    render_art(robot, [Fore.WHITE, Fore.WHITE, Fore.WHITE, Fore.WHITE, Fore.YELLOW, Fore.BLUE, Fore.RED])
+    
     try:
         while True:
-            clear_screen()
-            print(Fore.CYAN + "Slupe Demo" + Style.RESET_ALL)
-            print()
-            
-            robot = draw_robot()
-            render_art(robot)
-            
-            frame += 1
-            time.sleep(0.3)
+            time.sleep(1)
     except KeyboardInterrupt:
         print("\nRobot signing off!")
 
