@@ -44,14 +44,7 @@ def main():
     print()
     
     robot = draw_robot()
-    
-    robot_colors = [
-        Fore.YELLOW,
-        Fore.BLUE,
-        Fore.RED
-    ]
-    
-    render_art(robot, robot_colors)
+    render_art(robot)
     
     try:
         while True:
