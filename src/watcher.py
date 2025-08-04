@@ -37,12 +37,15 @@ class ArtistFileHandler(FileSystemEventHandler):
         
         try:
             # Run artist.py as a subprocess
+            env = os.environ.copy()
+            env['PYTHONUNBUFFERED'] = '1'
             self.process = subprocess.Popen(
-                [sys.executable, str(self.artist_path)],
+                [sys.executable, '-u', str(self.artist_path)],
                 stdout=subprocess.PIPE,
                 stderr=subprocess.STDOUT,
                 universal_newlines=True,
-                bufsize=1,
+                bufsize=0,
+                env=env,
                 preexec_fn=os.setsid if os.name != 'nt' else None,
                 creationflags=subprocess.CREATE_NEW_PROCESS_GROUP if os.name == 'nt' else 0
             )
